@@ -461,6 +461,17 @@ if(LUACHECK_EXECUTABLE)
         VERBATIM)
     list(APPEND CHECK_QA_TARGETS luacheck)
 endif()
+
+a_find_program(LINKCHECKER_EXECUTABLE linkchecker FALSE)
+if(LINKCHECKER_EXECUTABLE AND GENERATE_DOC)
+    add_custom_target(linkchecker
+        ${LINKCHECKER_EXECUTABLE} --check-extern --ignore-url 'AUTOGEN_uml_nav_tables_.*.svg' --no-follow-url documentation/89-NEWS.md.html build/doc/index.html
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        COMMENT "Running Linkchecker"
+        VERBATIM)
+    list(APPEND CHECK_QA_TARGETS linkchecker)
+endif()
+
 add_custom_target(check-qa DEPENDS ${CHECK_QA_TARGETS})
 add_dependencies(check check-qa check-examples)
 # }}}
