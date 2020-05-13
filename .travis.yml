@@ -6,6 +6,7 @@ branches:
   only:
     - master
     - 3.5
+    - check_doc_links
 
 addons:
   apt:
