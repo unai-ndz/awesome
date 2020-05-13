@@ -48,6 +48,7 @@ addons:
       # lgi.
       - gir1.2-pango-1.0
       - libgirepository1.0-dev
+      - linkchecker
 
 jobs:
   include:

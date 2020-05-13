@@ -94,6 +94,7 @@ Additionally, the following optional dependencies exist:
 - [gzip](http://www.gzip.org/) for compressing man pages
 - [ldoc >= 1.4.5](https://stevedonovan.github.io/ldoc/) for generating the
   documentation
+- [linkchecker](https://github.com/linkchecker/linkchecker) for checking documentation links
 - [busted](https://olivinelabs.com/busted/) for running unit tests
 - [luacheck](https://github.com/mpeterv/luacheck) for static code analysis
 - [LuaCov](https://keplerproject.github.io/luacov/) for collecting code coverage
